@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Segoe UI, sans-serif;
+}
+
+body {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    overflow: hidden;
+
+    background: linear-gradient(to bottom, #020111, #191970);
+
+}
+
+.container {
+
+    text-align: center;
+    color: white;
+    z-index: 10;
+
+}
+
+h1 {
+
+    font-size: 60px;
+    margin-bottom: 20px;
+
+    animation: glow 2s infinite alternate;
+
+}
+
+h2 {
+
+    margin-bottom: 35px;
+    color: #FFD700;
+
+}
+
+.card {
+
+    width: 650px;
+
+    background: rgba(255, 255, 255, .12);
+
+    backdrop-filter: blur(10px);
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    border: 1px solid rgba(255, 255, 255, .2);
+
+    box-shadow: 0 0 40px rgba(255, 255, 255, .15);
+
+    line-height: 1.8;
+
+    font-size: 20px;
+
+}
+
+.moon {
+
+    position: absolute;
+
+    top: 60px;
+
+    right: 90px;
+
+    width: 140px;
+
+    height: 140px;
+
+    border-radius: 50%;
+
+    background: #FFFDD0;
+
+    box-shadow:
+
+        0 0 40px #fff,
+
+        0 0 80px #fff,
+
+        0 0 150px white;
+
+}
+
+.stars {
+
+    position: absolute;
+
+    width: 100%;
+
+    height: 100%;
+
+    background-image:
+
+        radial-gradient(white 1px, transparent 1px);
+
+    background-size: 50px 50px;
+
+    animation: move 80s linear infinite;
+
+}
+
+@keyframes move {
+
+    from {
+
+        transform: translateY(0);
+
+    }
+
+    to {
+
+        transform: translateY(-800px);
+
+    }
+
+}
+
+@keyframes glow {
+
+    from {
+
+        text-shadow:
+
+            0 0 10px white,
+
+            0 0 20px white;
+
+    }
+
+    to {
+
+        text-shadow:
+
+            0 0 30px white,
+
+            0 0 60px gold,
+
+            0 0 100px gold;
+
+    }
+
+}
